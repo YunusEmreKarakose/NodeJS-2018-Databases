@@ -1,0 +1,118 @@
+doctype //if lt IE 7 
+html.no-js.ie6.lt8(lang='en')  
+|  
+html.no-js(lang='en')
+  // <![endif]
+  head
+    meta(charset='UTF-8')
+    // <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    title Öğrenci Kayıt
+    |         
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |  
+    |         
+    meta(name='description', content='Öğrenci Kayıt')
+    |         
+    meta(name='keywords', content='html5, css3, form, switch, animation, :target, pseudo-class')
+    |         
+    meta(name='author', content='Codrops')
+    |         
+    link(rel='shortcut icon', href='../favicon.ico')
+    |  
+    |         
+    link(rel='stylesheet', type='text/css', href='css/demo.css')
+    |         
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', type='text/css', href='css/animate-custom.css')
+  |     
+  body
+      header
+        h1
+          | 
+        | &#x9;&#x9;&#x9;&#x9;
+        nav.codrops-demos
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a.current-demo(href='index') Anasayfa
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='stuEntry') Öğrenci Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='interview') Mülakat Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='intern') Staj Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='itpage') Mülakat Tarih Oluştur
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='kurul') Kurula Ekle
+      |             
+      section
+        #container_demo          
+          a#toregister.hiddenanchor
+          |                     
+          a#tologin.hiddenanchor
+          |                     
+          #wrapper
+            #login.animate.form
+              form(action='getOgr',method="post", autocomplete='on')
+                h1 Öğrenci No ile Öğrenci Bilgileri
+                |  
+                |                                 
+                p
+                  label.num(for='stuNum1', data-icon='u')  Öğrenci No 
+                  |                                     
+                  input#stuNum1(name='stuNum1', required='required', type='number', placeholder='xxxxxx')
+                |                                
+                p.register1.button
+                  input(type='submit', value='Getir')
+                |   
+              form(action='getOgr2',method="post", autocomplete='on')
+                h1 Öğrenci No ile Öğrencinin Yapmış Olduğu Stajlar
+                |  
+                |                                 
+                p
+                  label.num(for='stuNum2', data-icon='u')  Öğrenci No 
+                  |                                     
+                  input#stuNum2(name='stuNum2', required='required', type='number', placeholder='xxxxxx')
+                |                                
+                p.register2.button
+                  input(type='submit', value='Getir')
+                |                                
+                
+              form(action='getOgr3',method="post", autocomplete='on')
+                h1 Öğrenci No ve Staj Başlama Tarihi ile Staj Mülakat Puanları
+                |  
+                |                                 
+                p
+                  label.num(for='stuNum3', data-icon='u')  Öğrenci No 
+                  |                                     
+                  input#stuNum3(name='stuNum3', required='required', type='number', placeholder='xxxxxx')
+                |                                 
+                p
+                  label.bd(for='bDate', data-icon='u')  Başlama tarihi 
+                  |                                     
+                  input#bDate(name='bDate', required='required', type='text', placeholder='gg/aa/yy')
+                |                                
+                p.register3.button
+                  input(type='submit', value='Getir')
+                |  
+              form(action='getCitySuccess',method="get", autocomplete='on')
+                h1 Şehire Göre Staj Başarı Durumu
+                |  
+                |                         
+                p.register.button
+                  input(type='submit', value='Getir')
+                |  
+              form(action='getSubjectSuccess',method="get", autocomplete='on')
+                h1 Konuya Göre Staj Başarı Durumu
+                |  
+                |                                
+                p.register.button
+                  input(type='submit', value='Getir')
+                |  
+              form(action='getDone',method="get", autocomplete='on')
+                h1 Stajı Tamamlanmış Öğrenciler
+                |  
+                |                              
+                p.register.button
+                  input(type='submit', value='Getir')
+                |  

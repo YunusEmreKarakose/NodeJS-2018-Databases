@@ -1,0 +1,98 @@
+doctype //if lt IE 7 
+html.no-js.ie6.lt8(lang='en')  
+|  
+html.no-js(lang='en')
+  // <![endif]
+  head
+    meta(charset='UTF-8')
+    // <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    title Öğrenci Kayıt
+    |         
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |  
+    |         
+    meta(name='description', content='Öğrenci Kayıt')
+    |         
+    meta(name='keywords', content='html5, css3, form, switch, animation, :target, pseudo-class')
+    |         
+    meta(name='author', content='Codrops')
+    |         
+    link(rel='shortcut icon', href='../favicon.ico')
+    |  
+    |         
+    link(rel='stylesheet', type='text/css', href='css/demo.css')
+    |         
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', type='text/css', href='css/animate-custom.css')
+  |     
+  body
+      header
+        h1
+          | 
+        | &#x9;&#x9;&#x9;&#x9;
+        nav.codrops-demos
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a.current-demo(href='index') Anasayfa
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='stuEntry') Öğrenci Kaydet
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='interview') Mülakat Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='intern') Staj Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='get') Sorgulama
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='itpage') Mülakat Tarih Oluştur
+      |             
+      section
+        #container_demo          
+          a#toregister.hiddenanchor
+          |                     
+          a#tologin.hiddenanchor
+          |                     
+          #wrapper
+            #login.animate.form
+              form(action='addKurul',method="post", autocomplete='on')
+                h1 Kurula Ekle
+                |  
+                |                                 
+                p
+                  label.kn(for='kno', data-icon='u')  No 
+                  |                                     
+                  input#kno(name='kno', required='required', type='number', placeholder='xxxx')
+                |                                  
+                p
+                  label.uuu(for='unvan', data-icon='u')  unvan 
+                  |                                     
+                  input#unvan(name='unvan', required='required', type='text', placeholder='Arş.Gör')
+                |                                 
+                p
+                  label.sss(for='ad', data-icon='p')  İsim 
+                  |                                     
+                  input#ad(name='ad', required='required', type='text', placeholder='?')
+                |                                  
+                p
+                  label.surname(for='soyad', data-icon='p')  Soyİsim 
+                  |                                     
+                  input#soyad(name='soyad', required='required', type='text', placeholder='?')
+                |                                  
+                p
+                  label.kkk(for='kur', data-icon='p')  Kurul 
+                  |                                     
+                  input#kur(name='kur', required='required', type='text', placeholder='KU1-KU2')
+                |                                
+                p.register.button
+                  input(type='submit', value='Ekle')
+                | 
+              form(action='delKurul',method="post", autocomplete='on')
+                h1 Kuruldan Sil
+                |                                   
+                p
+                  label.kkk(for='kno2', data-icon='p')  No 
+                  |                                     
+                  input#kno2(name='kno2', required='required', type='number', placeholder='xxxx')
+                |                                
+                p.register.button
+                  input(type='submit', value='Sil')
+                |     

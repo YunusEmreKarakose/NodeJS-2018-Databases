@@ -1,0 +1,93 @@
+doctype //if lt IE 7 
+html.no-js.ie6.lt8(lang='en')  
+|  
+html.no-js(lang='en')
+  // <![endif]
+  head
+    meta(charset='UTF-8')
+    // <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    title Öğrenci Kayıt
+    |         
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |  
+    |         
+    meta(name='description', content='Öğrenci Kayıt')
+    |         
+    meta(name='keywords', content='html5, css3, form, switch, animation, :target, pseudo-class')
+    |         
+    meta(name='author', content='Codrops')
+    |         
+    link(rel='shortcut icon', href='../favicon.ico')
+    |  
+    |         
+    link(rel='stylesheet', type='text/css', href='css/demo.css')
+    |         
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', type='text/css', href='css/animate-custom.css')
+  |     
+  body
+      header
+        h1
+          | 
+        | &#x9;&#x9;&#x9;&#x9;
+        nav.codrops-demos
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a.current-demo(href='index') Anasayfa
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='stuEntry') Öğrenci Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='interview') Mülakat Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='intern') Staj Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='get') Sorgula
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='kurul') Kurula Ekle
+      |             
+      section
+        #container_demo          
+          a#toregister.hiddenanchor
+          |                     
+          a#tologin.hiddenanchor
+          |                     
+          #wrapper
+            #login.animate.form
+              form(action='iTime',method="post", autocomplete='on')
+                h1 Mülakat Tarih Oluştur
+                |  
+                |                                 
+                p
+                  label.ddd(for='day', data-icon='u')  Gün 
+                  |                                     
+                  input#day(name='day', required='required', type='number', placeholder='?')
+                |                                 
+                p
+                  label.mmm(for='month', data-icon='p')  Ay 
+                  |                                     
+                  input#month(name='month', required='required', type='number', placeholder='?')
+                |                                  
+                p
+                  label.yyy(for='year', data-icon='p')  Yıl 
+                  |                                     
+                  input#year(name='year', required='required', type='number', placeholder='?')
+                |                                  
+                p
+                  label.hhh(for='hour', data-icon='p')  Saat 
+                  |                                     
+                  input#hour(name='hour', required='required', type='number', placeholder='?')
+                |                                  
+                p
+                  label.minute(for='minute', data-icon='p')  Aralık 
+                  |                                     
+                  input#minute(name='minute', required='required', type='number', placeholder='?')
+                |                                
+                p.register.button
+                  input(type='submit', value='Oluştur')
+                | 
+              form(action='getit',method="get", autocomplete='on')
+                h1 Mülakat Listesi Getir
+                |                          
+                p.register2.button
+                  input(type='submit', value='Getir')
+                | 

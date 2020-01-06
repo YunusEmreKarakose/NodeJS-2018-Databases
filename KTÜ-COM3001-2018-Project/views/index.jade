@@ -1,0 +1,92 @@
+doctype //if lt IE 7 
+html.no-js.ie6.lt8(lang='en')  
+|  
+html.no-js(lang='en')
+  // <![endif]
+  head
+    meta(charset='UTF-8')
+    // <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    title Anasayfa
+    |         
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |  
+    |         
+    meta(name='description', content='Öğrenci Kayıt')
+    |         
+    meta(name='keywords', content='html5, css3, form, switch, animation, :target, pseudo-class')
+    |         
+    meta(name='author', content='Codrops')
+    |         
+    link(rel='shortcut icon', href='../favicon.ico')
+    |  
+    |         
+    link(rel='stylesheet', type='text/css', href='css/demo.css')
+    |         
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', type='text/css', href='css/animate-custom.css')
+  |     
+  body
+      header
+        h1
+          | 
+        | &#x9;&#x9;&#x9;&#x9;
+        nav.codrops-demos
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a.current-demo(href='stuEntry') Öğrenci Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='interview') Mülakat Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='intern') Staj Kayıt
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='get') Sorgulama
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='itpage') Mülakat Tarih Oluştur
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          a(href='kurul') Kurula Ekle
+    section
+      #container_demo
+        a#toregister.hiddenanchor
+        a#tologin.hiddenanchor
+        #wrapper
+          #login.animate.form
+            form#mainp()
+            p
+              font(color='blue') 1) Öğrenci Kayıt:
+            p
+              font(color='blue')
+                | no,ad,soyad ve öğretim bilgileri ile
+                | öğrenciyi  veri tabanına kaydetme.
+            p
+              font(color='red') 2) Staj Kayıt:
+            p
+              font(color='red')
+                | no,kurum,gün vb bilgilerle yapılmış
+                | olan staj bilgilerini kaydetme.
+            p
+              font(color='green') 3) Mülakat Kayıt: 
+            p
+              font(color='green')
+                | no,tarih,not vb bilgilerle yapılmış
+                | olan stajın  değerlendirilmesi.
+            p
+              font(color='black') 4) Sorgulama:
+            p
+              font(color='black')
+                | a)Öğrenci No ile öğrenci bilgileri
+                | b)Öğrenci No ile öğrencin yapmış olduğu stajlar
+                | c)Öğrenci No ve Staj tarihiyle staj mülakat notları
+                | d-e) Şehir ve Konuya göre staj başarı durumu
+                | f)Stajı tamamlamış öğrenciler
+            p
+              font(color='blue') 5) Mülakat Tarih Oluştur:
+            p
+              font(color='blue')
+                | a)Girilen değerlere göre stajı değerlendirilmemiş
+                | öğrencilere mülakat tarihi atanması
+                | b)Mülakat listesi görüntüleme.
+            p
+              font(color='red') 6) Kurul Ekle:
+            p
+              font(color='red')
+                | Staj değerlendiren kurulun ayarlanması
