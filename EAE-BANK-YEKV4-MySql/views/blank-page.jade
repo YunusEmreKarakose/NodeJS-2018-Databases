@@ -1,0 +1,57 @@
+extends layouts/_layout.jade
+
+block title
+	title Blank Page - Vali Admin
+
+block content
+	.app-title
+		div
+			h1
+				i.fa.fa-dashboard
+				|  Blank Page
+			p Start a beautiful journey here
+
+		ul.app-breadcrumb.breadcrumb
+			li.breadcrumb-item
+				i.fa.fa-home.fa-lg
+			li.breadcrumb-item
+				a(href='sat') Blank Page
+
+	.row
+		.col-md-4.col-lg-4
+			.widget-small.primary.coloured-icon
+				i.icon(style="padding:10px;height: 115px;") 
+					img(src="images/süt.png",style="width: 60px;")
+				div.info
+					h4 Süt
+					p
+						b #{account[0].milk} Litre
+					form(action="sat",method="post",id="sut")
+						input(type="hidden",value="milk",name="islem",id="sut1")
+						input.btn.btn-primary.btn-block(type="submit",value="sat")
+
+		.col-md-4.col-lg-4
+			.widget-small.warning.coloured-icon
+				i.icon(style="padding:10px;height: 115px;") 
+					img(src="images/yumurta.png",style="width: 60px;")
+				div.info
+					h4 Yumurta
+					p
+						b #{account[0].egg} Adet
+					form(action="sat",method="post",id="yımırta")
+						input(type="hidden",value="egg",name="islem",id="yımırta1")
+						input.btn.btn-primary.btn-block(type="submit",value="sat")
+
+		.col-md-4.col-lg-4
+			.widget-small.info.coloured-icon
+				i.icon(style="padding:10px;height: 115px;") 
+					img(src="images/bal.png",style="width: 60px;")
+				div.info
+					h4 Bal
+					p
+						b #{account[0].honey} Gram
+					form(action="sat",method="post",id="bal")
+						input(type="hidden",value="honey",name="islem",id="bal1")
+						input.btn.btn-primary.btn-block(type="submit",value="sat")
+
+		

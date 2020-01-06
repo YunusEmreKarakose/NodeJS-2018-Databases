@@ -1,0 +1,98 @@
+extends layouts/_layout
+
+block content
+	.app-title
+		div
+			h1
+				i.fa.fa-dashboard
+				|  Anasayfa
+			p Siz İnek, tavuk vs. alınki bizde bunların parasını alıp yurtdışına kaçabilelim :D
+
+		ul.app-breadcrumb.breadcrumb
+			li.breadcrumb-item
+				i.fa.fa-home.fa-lg
+			li.breadcrumb-item
+				a(href='/') Anasayfa
+
+
+	.row
+		.col-md-12.danger Yeminiz Bitti
+
+	.row
+		.col-md-6.col-lg-3
+			.widget-small.primary.coloured-icon
+				i.icon(style="padding:10px;") 
+					img(src="images/inek.png",style="width: 60px;")
+				div.info
+					h4 İnek
+					p
+						b  Adet
+
+		.col-md-6.col-lg-3
+			.widget-small.warning.coloured-icon
+				i.icon(style="padding:10px;") 
+					img(src="images/tavuk.png",style="width: 60px;")
+				div.info
+					h4 Tavuk
+					p
+						b  Adet
+
+		.col-md-6.col-lg-3
+			.widget-small.info.coloured-icon
+				i.icon(style="padding:10px;") 
+					img(src="images/arı.png",style="width: 60px;")
+				div.info
+					h4 Arı
+					p
+						b  Adet
+
+		.col-md-6.col-lg-3
+			.widget-small.danger.coloured-icon
+				i.icon(style="padding:10px;") 
+					img(src="images/altın.png",style="width: 60px;")
+				div.info
+					h4 Altın
+					p
+						b #{account[0].coin}
+		
+	.row
+		.col-md-6.col-lg-3
+			.widget-small.primary.coloured-icon
+				i.icon(style="padding:10px;") 
+					img(src="images/süt.png",style="width: 60px;")
+				div.info
+					h4 Süt
+					p
+						b #{account[0].milk} Litre
+
+		.col-md-6.col-lg-3
+			.widget-small.warning.coloured-icon
+				i.icon(style="padding:10px;") 
+					img(src="images/yumurta.png",style="width: 60px;")
+				div.info
+					h4 Yumurta
+					p
+						b #{account[0].egg} Adet
+
+		.col-md-6.col-lg-3
+			.widget-small.info.coloured-icon
+				i.icon(style="padding:10px;") 
+					img(src="images/bal.png",style="width: 60px;")
+				div.info
+					h4 Bal
+					p
+						b #{account[0].honey} Gram
+
+		.col-md-6.col-lg-3
+			.widget-small.danger.coloured-icon
+				i.icon(style="padding:10px;") 
+					img(src="images/yem.png",style="width: 60px;")
+				div.info
+					h4 Yem
+					p
+						b #{account[0].seed}
+	
+
+	
+	
+		

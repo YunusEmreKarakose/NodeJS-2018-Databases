@@ -1,0 +1,46 @@
+extends layouts/_layout.jade
+
+block title
+    title Altın Al/Sat
+
+block content
+    .app-title
+        div
+            h1
+                i.fa.fa-dashboard
+                |  Altın Al/Sat
+            p Satmasan daha iyi ama sen bilirsin ^^
+
+        ul.app-breadcrumb.breadcrumb
+            li.breadcrumb-item
+                i.fa.fa-home.fa-lg
+            li.breadcrumb-item
+                a(href='sat') Altın Al-Sat
+
+    .row
+        .col-md-6
+            .tile
+                .tile-body
+                    h2 Altın Satın Al
+                form(id="para")
+                    .form-group
+                        label Satın Alınacak Miktar
+                        input.form-control(type="number",name="miktar",id="miktar",placeholder="Satın Alınacak Miktar")
+                    .form-group
+                        input.btn.btn-primary.pull-right(type="submit",value="Satın Al")
+
+        .col-md-6
+            .tile
+                .tile-body
+                    h2 Altın Sat
+                form(id="para1")
+                    .form-group
+                        label Satılacak Miktar
+                        input.form-control(type="number",name="miktar1",id="miktar1",placeholder="Satılacak Miktar")
+                    .form-group
+                        input.btn.btn-primary.pull-right(type="submit",value="Sat")
+        
+    if viewData.success
+        div.hatabildirimi Satma İşlemi Başarı İle Gerçekleşti
+    if viewData.success == false
+        div.basaribildirimi Girdiğiniz Sayı Bakiyenizden Fazla
